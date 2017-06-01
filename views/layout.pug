@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Web application for quickly building and updating resumes.')
+    meta(name='author', content='Steve Mulholland')
+    link(rel='icon', href='../../favicon.ico')
+    title Get My Resume | Online Resume Builder
+    // Bootstrap core CSS
+    link(rel = 'stylesheet' href = "/bower_components/bootstrap/dist/css/bootstrap.min.css")
+    // Custom styles for this template
+    link(rel = 'stylesheet' href = "/css/style.css")
+  body
+      nav.navbar.navbar-toggleable-md.fixed-top.navbar-inverse.bg-inverse
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        a.navbar-brand(href='#') Navbar
+        #navbarsExampleDefault.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/') Home
+            li.nav-item
+              a.nav-link(href='/reviews') Reviews
+            li.nav-item
+              a.nav-link(href='/jobs') Jobs            
+          form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type='text', placeholder='Search')
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+          ul.navbar-nav
+            if user
+              li.nav-item
+                a.nav-link(href='/users/logout') Logout
+            else
+              li.nav-item
+                a.nav-link(href='/users/register') Register
+              li.nav-item
+                a.nav-link(href='/users/login') Login
+    
+      .container
+        != messages('message', locals)
+        if errors
+          each error, i in errors
+            div(class = 'alert alert-danger') #{error.msg}
+        .row.row-offcanvas.row-offcanvas-right
+          .col-12.col-md-9
+            block content
+          #sidebar.col-6.col-md-3.sidebar-offcanvas
+            .list-group
+              a.list-group-item.active(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+              a.list-group-item(href='#') Link
+      hr
+      footer
+        p Copyright &copy; 2017
+//Bootstrap core JavaScript
+//Placed at the end of the document so the pages load faster
+script(src='/bower_components/tether/dist/js/tether.min.js')
+script(src='/bower_components/jquery/dist/jquery.js')  
+script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+script(src='/js/main.js')
