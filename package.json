@@ -1,0 +1,37 @@
+{
+  "name": "get-my-resume",
+  "version": "1.0.0",
+  "description": "Web application for quickly building and updating resumes.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the3rdpig/get-my-resume.git"
+  },
+  "keywords": [
+    "resume",
+    "management",
+    "system"
+  ],
+  "author": "Steve Mulholland",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://www.getmyresume.net/issues"
+  },
+  "homepage": "https://www.getmyresume.net",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.15.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "mongoose": "^4.10.4",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.1"
+  }
+}
